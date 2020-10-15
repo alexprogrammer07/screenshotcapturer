@@ -1,0 +1,2 @@
+pyautogui==0.0.50
+pyperclip==1.8.0
