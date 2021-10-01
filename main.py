@@ -2,13 +2,14 @@ from tkinter import *
 from tkinter import messagebox
 import pyautogui
 import pyperclip
+import os
 
 root = Tk()
 time = IntVar()
 time.set(1)
 c = 1
 cnt = 1
-path = r"Your Path Here"
+path = "os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')"
 
 
 
