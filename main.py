@@ -4,7 +4,7 @@ import pyautogui
 import pyperclip
 import os
 
-root = Tk()
+root = Tk()  # Initialize the main window
 time = IntVar()
 time.set(1)
 c = 1
@@ -14,6 +14,9 @@ path = "os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')"
 
 
 def take_shot():
+    """
+    A method to capture the screen and save the result in desired location
+    """
     global c, cnt
     pyperclip.copy(c)
     count_final = pyperclip.paste()
@@ -34,6 +37,6 @@ def take_shot():
 
 l = Label(root, textvariable=time, fg="red")
 l.pack()
-Button(root, text=f"Take Shot 1 sec", command=take_shot).pack()
+Button(root, text=f"Take Shot 1 sec", command=take_shot).pack(). # Create a shortcut to capture the shot
 
 root.mainloop()
