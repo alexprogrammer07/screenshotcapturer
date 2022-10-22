@@ -17,12 +17,13 @@ def take_shot():
     """
     A method to capture the screen and save the result in desired location
     """
-    global c, cnt
+    global c
+    global cnt
     pyperclip.copy(c)
     count_final = pyperclip.paste()
     c = count_final
     timeleft = time.get()
-    if timeleft > 0:
+    if (timeleft > 0):
         timeleft -= 1
         time.set(timeleft)
         root.after(1000, take_shot)
@@ -39,4 +40,4 @@ l = Label(root, textvariable=time, fg="red")
 l.pack()
 Button(root, text=f"Take Shot 1 sec", command=take_shot).pack(). # Create a shortcut to capture the shot
 
-root.mainloop()
+root.mainloop() #initatiating the tkinter window
